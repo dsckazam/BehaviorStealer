@@ -1,13 +1,14 @@
 @echo off
-title Setup Environment
+title Setup Environment for BehaviorStealer
 color 0B
 
 echo ===============================================
-echo          Python Project Setup Script
+echo       BehaviorStealer Setup Script
 echo ===============================================
 
 echo Checking Python installation...
 python --version >nul 2>&1
+
 if errorlevel 1 (
     echo.
     echo [ERROR] Python is not installed or not added to PATH.
@@ -25,7 +26,7 @@ python -m pip install --upgrade pip
 
 echo.
 echo Installing required Python packages...
-pip install --no-cache-dir opencv-python customtkinter psutil pillow requests
+pip install --no-cache-dir requests psutil pillow opencv-python pywin32 win32crypt pycryptodome
 
 if errorlevel 1 (
     echo.
@@ -39,5 +40,5 @@ if errorlevel 1 (
 
 echo.
 echo Setup completed successfully!
-echo You can now run your Python project.
-pause>nul
+echo You can now run your BehaviorStealer project.
+pause
