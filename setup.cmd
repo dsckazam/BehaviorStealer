@@ -26,7 +26,7 @@ python -m pip install --upgrade pip
 
 echo.
 echo Installing required Python packages...
-pip install --no-cache-dir requests psutil pillow opencv-python pywin32 win32crypt pycryptodome
+pip install --no-cache-dir requests psutil pillow opencv-python pywin32 pycryptodome
 
 if errorlevel 1 (
     echo.
