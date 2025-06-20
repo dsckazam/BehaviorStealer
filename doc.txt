@@ -1,0 +1,77 @@
+BehaviorBuilder - Documentation
+
+Description:
+-------------
+BehaviorBuilder is a graphical user interface built with CustomTkinter to configure and generate
+a "Behavior Stealer" payload. The user can select different modules to include,
+specify a Discord webhook URL for data exfiltration, and choose the output
+file format (.py or .exe).
+
+Main Features:
+--------------
+- Dark-themed interface with a sidebar for navigation between the main builder page and documentation.
+- Dynamic checkboxes to enable/disable data collection modules.
+- Input field for Discord webhook URL.
+- Option to select the output file type (.py or .exe).
+- Build button that generates the Python script including the selected modules.
+- Optional compilation into .exe using PyInstaller.
+- Webhook validity test through a POST request.
+
+Available Modules:
+------------------
+- Auto Destruction
+- Clipboard
+- Discord Token Stealer
+- Anti Virtual Machine (Anti VM)
+- Kill Discord Client
+- IP Info
+- System Information
+- Request Admin Privileges
+- IP Configuration
+- Serial Numbers
+- HWID & UUID
+- Discord Info
+- Blue Screen of Death (BSOD)
+- Screen Capture
+- Webcam Capture
+- Add to Startup
+- Discord Injection
+- Shutdown
+- Disconnect Session
+- Kill All Running Programs
+
+Usage:
+-------
+1. Launch the program.
+2. Check the modules you want to include in the payload.
+3. Enter your Discord webhook URL.
+4. Choose the output file type (.py or .exe).
+5. Click "Build" to generate the file.
+6. If you choose .exe, PyInstaller will automatically compile it.
+7. Use "Test Webhook" to verify your webhook URL is valid.
+
+Code Structure:
+---------------
+- BehaviorBuilder class (inherits from ctk.CTk)
+  - __init__: Sets up the window, sidebar, and module variables.
+  - clear_main_frame: Clears the main content area to display a new view.
+  - show_builder: Displays the main form for module selection.
+  - show_doc: Shows the documentation loaded from an external text file.
+  - build_payload: Generates the Python file with selected modules and compiles if needed.
+  - compile_with_pyinstaller: Runs PyInstaller to compile the executable.
+  - test_webhook: Sends a test message to the Discord webhook and shows the result.
+
+Dependencies:
+-------------
+- customtkinter
+- Pillow (PIL)
+- requests
+- subprocess (built-in)
+- tkinter (built-in)
+
+Expected Files:
+---------------
+- Icons:
+  - ICO/behavior.ico
+  - PNG/builder.png
+  - PNG/doc.png
