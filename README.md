@@ -7,8 +7,8 @@
 ---
 
 ## 📸 Interface Preview
-![Builder Screenshot](PNG/builder.png)
-![Documentation Screenshot](PNG/doc.png)
+![behavior](https://github.com/user-attachments/assets/3f42467c-a18d-4fd8-8652-4e193d3f59c3)
+
 
 ---
 
